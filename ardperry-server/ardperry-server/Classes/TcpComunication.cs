@@ -29,12 +29,7 @@ namespace ardperry_server.Classes {
 
 			sckListener.Bind(new IPEndPoint(IPAddress.Any, 65432));
 
-			Console.WriteLine("********************************************");
-			Console.WriteLine("         Simple TCP Server V 1.0          \n");
-			Console.WriteLine("Showing everything received from  client ...");
-			Console.WriteLine("********************************************\n");
-
-			Console.WriteLine("STCPS running ...                           ");
+			
 			sckListener.Listen(2);  
 
 			Socket sckWorker = sckListener.Accept();
