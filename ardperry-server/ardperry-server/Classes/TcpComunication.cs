@@ -39,7 +39,13 @@ namespace ardperry_server.Classes {
 
 
 			while (strData != "quit") {
-				intNumBytesRec = sckWorker.Receive(buffer);
+
+				try {
+					intNumBytesRec = sckWorker.Receive(buffer);
+				} catch(SocketException ex) {
+					Console.WriteLine(ex.Message);
+					break;
+				}
 
 				strData = Encoding.UTF8.GetString(buffer, 0, intNumBytesRec);
 

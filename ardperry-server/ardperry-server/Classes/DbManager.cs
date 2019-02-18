@@ -13,7 +13,7 @@ namespace ardperry_server.Classes {
 		private SqlConnection connection;
 
 		public DbManager(string command_query) {
-			connection = new SqlConnection("Data Source=C215-026;Initial Catalog=Rilevazioni;Integrated Security=True");
+			connection = new SqlConnection("Data Source=C215-025;Initial Catalog=Rilevazioni;Integrated Security=True");
 			try {
 				connection.Open();
 			} catch {
